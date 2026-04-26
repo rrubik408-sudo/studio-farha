@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aktuality ze studia Farha – Olga Warda, lektorka orientálního tance v Českých Budějovicích." />
+  <title>Aktuality · Olga Warda</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- News styles -->
+  <link href="css/news.css" rel="stylesheet" />
+
+  <!-- Netlify Identity (needed if logged-in redirect from CMS) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #0a0a0a;
+      color: #e0e0e0;
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* Minimal nav bar */
+    .site-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201,169,110,0.12);
+      padding: 0 32px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-bar-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .site-bar-logo span { color: #c9a96e; }
+
+    .site-bar-back {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #c9a96e;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: gap 0.3s;
+    }
+
+    .site-bar-back:hover { gap: 12px; }
+
+    /* Page footer */
+    .site-foot {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav bar -->
+  <header class="site-bar">
+    <a class="site-bar-logo" href="index-01.html">Olga <span>Warda</span></a>
+    <a class="site-bar-back" href="index-01.html">← Zpět na web</a>
+  </header>
+
+  <!-- News section -->
+  <main>
+    <section class="news-section" aria-label="Aktuality">
+      <div class="news-section-header">
+        <span class="news-section-label">Studio Farha</span>
+        <h1 class="news-section-title">Aktu<em>ality</em></h1>
+        <div class="news-section-rule"></div>
+      </div>
+
+      <!-- JS fills this grid -->
+      <div class="news-grid" role="list" aria-live="polite" aria-label="Seznam aktualit"></div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    &copy; <span id="year"></span> Olga Warda · Studio Farha · České Budějovice
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/news.js"></script>
+
+  <!-- Netlify Identity redirect handling -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', function (user) {
+        if (!user) {
+          window.netlifyIdentity.on('login', function () {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

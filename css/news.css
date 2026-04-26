@@ -1,0 +1,248 @@
+/* ================================================
+   NEWS SECTION — Olga Warda Portfolio
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+:root {
+  --n-bg:         #0a0a0a;
+  --n-card-bg:    #111111;
+  --n-text:       #e0e0e0;
+  --n-muted:      #888888;
+  --n-gold:       #c9a96e;
+  --n-gold-dim:   rgba(201,169,110,0.18);
+  --n-border:     rgba(201,169,110,0.16);
+  --n-radius:     2px;
+}
+
+/* ---- Section wrapper ---- */
+.news-section {
+  background: var(--n-bg);
+  padding: 100px 0 110px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ---- Header ---- */
+.news-section-header {
+  text-align: center;
+  margin-bottom: 72px;
+  padding: 0 20px;
+}
+
+.news-section-label {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--n-gold);
+  margin-bottom: 18px;
+}
+
+.news-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 5vw, 54px);
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.news-section-title em {
+  font-style: italic;
+  color: var(--n-gold);
+}
+
+.news-section-rule {
+  width: 36px;
+  height: 1px;
+  background: var(--n-gold);
+  margin: 22px auto 0;
+}
+
+/* ---- Grid ---- */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---- Card ---- */
+.news-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--n-card-bg);
+  border: 1px solid var(--n-border);
+  border-radius: var(--n-radius);
+  overflow: hidden;
+  cursor: default;
+  /* initial state for fade-in */
+  opacity: 0;
+  transform: translateY(28px);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.news-card.is-visible {
+  animation: cardFadeIn 0.65s ease forwards;
+}
+
+@keyframes cardFadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 56px rgba(201,169,110,0.10), 0 4px 16px rgba(0,0,0,0.4);
+}
+
+/* ---- Card image ---- */
+.news-card-figure {
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: #1c1c1c;
+  flex-shrink: 0;
+}
+
+.news-card-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.65s ease;
+}
+
+.news-card:hover .news-card-figure img {
+  transform: scale(1.07);
+}
+
+/* ---- Card body ---- */
+.news-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px 26px 30px;
+}
+
+.news-card-date {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--n-gold);
+  margin-bottom: 12px;
+}
+
+.news-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.42;
+  letter-spacing: 0.02em;
+  margin: 0 0 14px;
+}
+
+.news-card-desc {
+  font-size: 12.5px;
+  font-weight: 300;
+  color: var(--n-muted);
+  line-height: 1.85;
+  margin: 0 0 auto;
+  padding-bottom: 22px;
+}
+
+/* ---- Read more link ---- */
+.news-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--n-gold);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  width: fit-content;
+  transition: border-color 0.3s, gap 0.3s;
+}
+
+.news-card-link:hover {
+  border-color: var(--n-gold);
+  gap: 12px;
+}
+
+.news-card-link-arrow {
+  font-size: 13px;
+  transition: transform 0.3s;
+}
+
+.news-card-link:hover .news-card-link-arrow {
+  transform: translateX(3px);
+}
+
+/* ---- Empty / loading state ---- */
+.news-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 64px 0;
+  color: var(--n-muted);
+  font-size: 13px;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+.news-loading {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 0;
+  gap: 8px;
+}
+
+.news-loading-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--n-gold);
+  border-radius: 50%;
+  animation: dotPulse 1.4s infinite ease-in-out;
+}
+
+.news-loading-dot:nth-child(2) { animation-delay: 0.2s; }
+.news-loading-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dotPulse {
+  0%, 80%, 100% { opacity: 0.2; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1); }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .news-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .news-section { padding: 70px 0 80px; }
+  .news-section-header { margin-bottom: 48px; }
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 16px;
+  }
+}
+
+/* ---- Light mode ---- */
+body.light-mode .news-section { background: #f4f4f4; }
+body.light-mode .news-card { background: #fff; border-color: rgba(0,0,0,0.07); }
+body.light-mode .news-card:hover { box-shadow: 0 24px 56px rgba(0,0,0,0.08); }
+body.light-mode .news-card-title { color: #1a1a1a; }
+body.light-mode .news-card-desc { color: #666; }
+body.light-mode .news-section-title { color: #1a1a1a; }
+body.light-mode .news-card-figure { background: #e0e0e0; }
+body.light-mode .news-loading-dot { background: #1a1a1a; }

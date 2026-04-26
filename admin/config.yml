@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where CMS-uploaded images are stored
+media_folder: "img/news"
+public_folder: "/img/news"
+
+# Optional: show Czech UI
+locale: cs
+
+collections:
+  - name: "news"
+    label: "Aktuality"
+    label_singular: "Aktualita"
+    folder: "_posts/news"
+    create: true
+    delete: true
+    # filename: YYYY-MM-DD-slug
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    # After saving, rebuild data/news.json via Netlify build
+    fields:
+      - label: "Nadpis"
+        name: "title"
+        widget: "string"
+        hint: "Krátký výstižný název aktuality"
+
+      - label: "Datum"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD. MM. YYYY"
+        time_format: false
+
+      - label: "Hlavní obrázek"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Doporučená velikost: 880 × 550 px (poměr 16:10)"
+
+      - label: "Krátký popis"
+        name: "description"
+        widget: "text"
+        hint: "Zobrazí se na kartičce aktuality (max. 200 znaků)"
+
+      - label: "Odkaz (volitelný)"
+        name: "link"
+        widget: "string"
+        required: false
+        hint: "URL pro tlačítko 'Číst více'. Nechte prázdné, pokud odkaz není"
+
+      - label: "Celý text článku"
+        name: "body"
+        widget: "markdown"
+        required: false
+        hint: "Nepovinný plný text – pro budoucí detailní stránku"

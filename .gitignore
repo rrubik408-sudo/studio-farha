@@ -1,0 +1,4 @@
+.vscode/
+New Document.txt
+*.DS_Store
+node_modules/
