@@ -1,8 +1,10 @@
 ---
-title: "Zahájení nové sezóny 2025"
-date: "2025-09-01"
-image: "img/background/1.png"
-description: "Nová sezóna ve studiu Farha začíná v září. Přihlašte se na pravidelné kurzy orientálního tance pro všechny úrovně – od začátečnic po pokročilé."
+title: Zahájení nové sezóny duben-červen 2026
+date: 2026-04-26
+image: img/background/1.png
+description: Jarní semestr ve studiu Farha začíná v dubnu Přihlašte se na
+  pravidelné kurzy orientálního tance pro všechny úrovně – od začátečnic po
+  pokročilé.
 link: ""
 ---
 
