@@ -1,8 +1,9 @@
 ---
-title: "Vystoupení na mezinárodním festivalu"
-date: "2025-07-10"
-image: "img/background/3.jpg"
-description: "Olga reprezentovala studio Farha na mezinárodním festivalu orientálního tance. Přečtěte si reportáž z akce plné inspirace."
+title: "Vystoupení na mezinárodním festivalu: Test"
+date: 2026-04-10
+image: /img/news/image0.jpeg
+description: Olga reprezentovala studio Farha na mezinárodním festivalu
+  orientálního tance. Přečtěte si reportáž z akce plné inspirace. Test
 link: ""
 ---
 
