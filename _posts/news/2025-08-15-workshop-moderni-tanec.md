@@ -1,8 +1,8 @@
 ---
-title: Připravují se letní workshopy
-date: 2026-04-27
-image: img/background/2.png
-description: V červenci a srpnu připravují letní workshopy ve studiu Farha
+title: "Workshop – Moderní orientální tanec"
+date: "2025-08-15"
+image: "https://res.cloudinary.com/dgqn2mbdv/image/upload/v1777313501/img/background/2.png"
+description: "Intenzivní workshop zaměřený na moderní styl a práci s tělem. Lektoruje Olga Warda. Omezená kapacita – přihlašte se včas."
 link: ""
 ---
 

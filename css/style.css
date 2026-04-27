@@ -67,45 +67,39 @@
 /* 1. TEMPLATE BACKGROUNDS */
 /* 1.1. fullscreen slider BACKGROUND */
 .bg-img-1 {
-background-image: url(../img/background/1.png);
+background-image: url(https://res.cloudinary.com/dgqn2mbdv/image/upload/v1777313499/img/background/1.png);
 }
 
 .bg-img-2 {
-background-image: url(../img/background/2.png);
+background-image: url(https://res.cloudinary.com/dgqn2mbdv/image/upload/v1777313501/img/background/2.png);
 }
 
 .bg-img-3 {
-background-image: url(../img/background/3.jpg);
+background-image: url(https://res.cloudinary.com/dgqn2mbdv/image/upload/v1777313504/img/background/3.jpg);
 }
 
 .bg-img-4 {
-background-image: url(../img/background/4.png);
+background-image: url(https://res.cloudinary.com/dgqn2mbdv/image/upload/v1777313507/img/background/4.png);
 }
 
 .bg-img-5 {
-background-image: url(../img/background/5.png);
+background-image: url(https://res.cloudinary.com/dgqn2mbdv/image/upload/v1777313509/img/background/5.png);
 }
 
 .bg-img-6 {
-background-image: url(../img/background/6.png);
+background-image: url(https://res.cloudinary.com/dgqn2mbdv/image/upload/v1777313514/img/background/6.png);
 }
 
 .bg-img-7 {
-background-image: url(../img/background/7.png);
+background-image: url(https://res.cloudinary.com/dgqn2mbdv/image/upload/v1777313516/img/background/7.png);
 }
 
 .bg-img-8 {
-background-image: url(../img/background/hero-bg-8.jpg);
-}
-
-
-/* 1.2. parallax IMG BACKGROUND */
-.parallax-contact {
-background-image: url(../img/background/parallax-contact.jpg);
+background-image: url(https://res.cloudinary.com/dgqn2mbdv/image/upload/v1777313519/img/background/8.png);
 }
 
 .parallax-blank {
-background-image: url(../img/background/8.png);
+background-image: url(https://res.cloudinary.com/dgqn2mbdv/image/upload/v1777313519/img/background/8.png);
 }
 
 
@@ -766,7 +760,29 @@ z-index: 100;
   .timeline-image {
     width: 366px!important;
     height: 366px;
-	top: 183px;
+    top: 183px;
+  }
+  #services {
+    padding-top: 80px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .timeline-image {
+    width: 280px!important;
+    height: 280px;
+    top: 140px;
+  }
+  .intro-years h3 {
+    font-size: 80px;
+  }
+  .intro-years h2 {
+    font-size: 8px;
+    margin: 0 0 30px 0;
+    padding-top: 25px;
+  }
+  #services {
+    padding-top: 80px;
   }
 }
 
@@ -1945,6 +1961,12 @@ margin: -16px 0 0 0;
   }
 }
 
+@media only screen and (max-width: 992px) {
+  .services-steps-wrapper {
+    margin-top: 0;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   .services-steps-wrapper {
     margin-bottom: 0;
@@ -1964,8 +1986,8 @@ padding-left: 135px;
 
 @media only screen and (max-width: 768px) {
   .service-heading {
-    padding-left: 90px;
-  } 
+    padding-left: 125px;
+  }
 }
 
 .service-number {
@@ -1991,6 +2013,7 @@ z-index: 1;
   }
 }
 
+
 @supports((text-stroke: 1px #e0e0e0) or (-webkit-text-stroke: 1px #e0e0e0)) {
   .service-number {
     color: transparent;
@@ -2015,7 +2038,7 @@ margin: -7px 0;
 
 @media only screen and (max-width: 768px) {
   #services p {
-    padding-left: 90px;
+    padding-left: 125px;
   }
 }
 
@@ -2030,7 +2053,7 @@ font-size: 12px;
 font-weight: 500;
 letter-spacing: 0.1em;
 text-transform: uppercase;
-color: #5f5f5f;
+color: #aaaaaa;
 margin: 14px 0 0 0;
 }
 
@@ -2063,7 +2086,7 @@ font-size: 11px;
 font-weight: 500;
 letter-spacing: 0.08em;
 text-transform: uppercase;
-color: #5f5f5f;
+color: #aaaaaa;
 margin: 8px 0 0 0;
 }
 
@@ -2096,7 +2119,7 @@ font-size: 11px;
 font-weight: 500;
 letter-spacing: 0.08em;
 text-transform: uppercase;
-color: #5f5f5f;
+color: #aaaaaa;
 text-align: right;
 }
 
@@ -2121,6 +2144,12 @@ text-align: center !important;
 @media only screen and (max-width: 995px) {
   .pull-up {
     margin: -15px 0 5px 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .pull-up {
+    margin: 20px 0 5px 0;
   }
 }
 
