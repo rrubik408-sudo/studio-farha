@@ -1,8 +1,8 @@
 ---
-title: "Workshop – Moderní orientální tanec"
-date: "2025-08-15"
-image: "https://res.cloudinary.com/dgqn2mbdv/image/upload/v1777313501/img/background/2.png"
-description: "Intenzivní workshop zaměřený na moderní styl a práci s tělem. Lektoruje Olga Warda. Omezená kapacita – přihlašte se včas."
+title: Letní taneční workshopy 2026
+date: 2025-08-15
+image: https://res.cloudinary.com/dgqn2mbdv/image/upload/v1777313501/img/background/2.png
+description: V červenci a srpnu proběhnou taneční workshopy
 link: ""
 ---
 
